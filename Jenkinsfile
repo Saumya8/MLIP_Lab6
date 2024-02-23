@@ -2,21 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Setup Environment') {
-            steps {
-                sh '''
-                #!/bin/bash
-                # Check if the conda environment exists
-                if [ $(conda env list | grep lab6-sgangrad | wc -l) -eq 0 ]; then
-                    echo "Creating Conda environment: lab6-sgangrad"
-                    # Create a new conda environment
-                    conda create -y -n lab6-sgangrad python=3.8 pytest -c conda-forge
-                else
-                    echo "Conda environment 'lab6-sgangrad' already exists"
-                fi
-                '''
-            }
-        }
         stage('Build') {
             steps {
                 sh '''#!/bin/bash

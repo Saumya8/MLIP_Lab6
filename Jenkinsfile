@@ -20,22 +20,22 @@ pipeline {
                 # sudo /PATH/TO/CONDA init
 
                 # Initialize Conda in bash
-                eval "$(conda shell.bash hook)"
+                # eval "$(conda shell.bash hook)"
                 
                 # Activate the Conda environment
                 #conda activate lab6-sgangrad
-                home/team17/miniconda3/bin/conda run -n lab6-sgangrad pytest
+                home/team12/miniconda3/bin/conda run -n lab6-sgangrad pytest
 
         
                 # Run pytest
                 # pytest
 
                 # TODO Complete the command to run pytest
-                sudo /opt/conda/bin/conda run -n mlip pytest
+                #sudo /opt/conda/bin/conda run -n mlip pytest
                 # sudo /PATH/TO/CONDA run -n <Envinronment Name> <Command you want to run>
 
-                echo 'pytest not runned'
-                exit 1 #comment this line after implementing Jenkinsfile
+                #echo 'pytest not runned'
+                #exit 1 #comment this line after implementing Jenkinsfile
                 '''
 
             }

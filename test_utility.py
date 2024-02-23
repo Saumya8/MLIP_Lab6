@@ -36,6 +36,10 @@ def feature_target_sample(housing_data_sample):
     return (feature_df, target_series)
 
 def test_data_split(feature_target_sample):
-    return_tuple = data_split(*feature_target_sample)
+    #return_tuple = data_split(*feature_target_sample)
     # TODO test if the length of return_tuple is 4
-    raise NotImplemented
+    X_train, X_test, y_train, y_test = data_split(*feature_target_sample)
+    assert len((X_train, X_test, y_train, y_test)) == 4, "Data split should return four elements"
+    # Optionally, add more assertions here to validate the correctness of the split, e.g., sizes of the splits
+
+    #raise NotImplemented

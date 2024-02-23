@@ -23,10 +23,12 @@ pipeline {
                 eval "$(conda shell.bash hook)"
                 
                 # Activate the Conda environment
-                conda activate lab6-sgangrad
+                #conda activate lab6-sgangrad
+                home/team17/miniconda3/bin/conda run -n lab6-sgangrad pytest
+
         
                 # Run pytest
-                pytest
+                # pytest
 
                 # TODO Complete the command to run pytest
                 sudo /opt/conda/bin/conda run -n mlip pytest

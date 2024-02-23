@@ -24,7 +24,7 @@ pipeline {
                 
                 # Activate the Conda environment
                 #conda activate lab6-sgangrad
-                home/team12/miniconda3/bin/conda run -n lab6-sgangrad pytest
+                /opt/miniconda3/bin/conda run -n lab6-sgangrad pytest
 
         
                 # Run pytest
